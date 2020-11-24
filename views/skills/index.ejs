@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Armeen's Dev Skills</title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+<body>
+  <a href="/">Home</a>
+  <h1>Dev Skills</h1>
+  <% if (skills.length) { %>
+  <ul>
+    <% skills.forEach(function(s) { %>
+    <li>
+      <a href="/skills/<%= s.id %>"><%= s.skill %></a>
+    </li>
+    <% }); %>
+  </ul>
+  <% } else { %>
+  <h1>You should study.</h1>
+  <% } %>
+  <a href="/skills/new">Add a skill</a>
+</body>
+</html>
