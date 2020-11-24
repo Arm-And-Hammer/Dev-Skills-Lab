@@ -6,8 +6,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>This is <%= skills.id %></h1>
-
+    <h1>This is skill number <%= skillNum %></h1>
+    <h2><%= skill.skill %></h2>
     <a href="/skills">Back to skills</a>
+    <form action="/skills/<%= skill.id %>?_method=DELETE" method="POST">
+        <button type="submit">DELETE SKILL</button>
+    </form>
 </body>
 </html>
